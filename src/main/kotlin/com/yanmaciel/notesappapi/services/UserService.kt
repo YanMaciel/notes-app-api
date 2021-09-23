@@ -7,6 +7,7 @@ import com.yanmaciel.notesappapi.models.Note
 import com.yanmaciel.notesappapi.models.User
 import com.yanmaciel.notesappapi.repository.UserRepository
 import io.jsonwebtoken.Jwts
+import io.thedocs.cookie.CookieSameSiteNoneChecker
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Service
@@ -53,6 +54,7 @@ class UserService(private val userRepository: UserRepository) {
             .signWith(io.jsonwebtoken.SignatureAlgorithm.HS512, "secret")
             .compact()
 
+        CookieSameSiteNoneChecker().isSameSiteNoneIncompatible("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36")
         val cookie = Cookie("jwt", jwt)
         cookie.isHttpOnly = true
         cookie.path = "/"

@@ -10,7 +10,5 @@ import org.springframework.boot.runApplication
 class NotesappapiApplication
 
 fun main(args: Array<String>) {
-	CookieSameSiteNoneChecker().isSameSiteNoneIncompatible("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36")
-
 	runApplication<NotesappapiApplication>(*args)
 }
