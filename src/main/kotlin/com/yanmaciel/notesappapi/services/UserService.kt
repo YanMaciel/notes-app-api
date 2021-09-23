@@ -54,7 +54,6 @@ class UserService(private val userRepository: UserRepository) {
             .signWith(io.jsonwebtoken.SignatureAlgorithm.HS512, "secret")
             .compact()
 
-        CookieSameSiteNoneChecker().isSameSiteNoneIncompatible("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36")
         val cookie = Cookie("jwt", jwt)
         cookie.isHttpOnly = true
         cookie.path = "/"
