@@ -96,6 +96,11 @@
 			<artifactId>h2</artifactId>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/io.thedocs/cookie-same-site-none -->
+		<dependency>
+			<groupId>io.thedocs</groupId>
+			<artifactId>cookie-same-site-none</artifactId>
+		</dependency>
 
 
 
