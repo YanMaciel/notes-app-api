@@ -12,7 +12,7 @@ import javax.validation.Valid
 
 @RestController
 @RequestMapping("v1/notes")
-@CrossOrigin(origins = ["http://localhost:3000"], allowCredentials = "true")
+@CrossOrigin(origins = ["http://localhost:3000", "https://notesapp-front-app.herokuapp.com"], allowCredentials = "true")
 @Validated
 class NoteController(private val noteService: NoteService, private val userService: UserService) {
 
