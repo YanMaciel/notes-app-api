@@ -25,6 +25,7 @@ class AuthController(private val userService: UserService) {
     fun logout(response: HttpServletResponse): ResponseEntity<Any> =
         userService.logout(response)
 
+
     @GetMapping("/{id}")
     fun userInformation(@PathVariable id: Long): ResponseEntity<User>? =
         userService.getById(id)
