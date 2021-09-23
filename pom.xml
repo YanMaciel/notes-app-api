@@ -100,6 +100,7 @@
 		<dependency>
 			<groupId>io.thedocs</groupId>
 			<artifactId>cookie-same-site-none</artifactId>
+			<version>1.01</version>
 		</dependency>
 
 
