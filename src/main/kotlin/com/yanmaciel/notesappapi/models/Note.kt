@@ -1,6 +1,7 @@
 package com.yanmaciel.notesappapi.models
 
 import com.fasterxml.jackson.annotation.JsonIgnore
+import org.hibernate.annotations.GenericGenerator
 import org.springframework.web.bind.annotation.CrossOrigin
 import java.time.LocalDateTime
 import javax.persistence.*
@@ -10,7 +11,8 @@ import javax.validation.constraints.NotBlank
 @CrossOrigin
 data class Note(
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(generator = "increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
     val id: Long? = null,
 
     @field:NotBlank

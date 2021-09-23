@@ -1,6 +1,7 @@
 package com.yanmaciel.notesappapi.models
 
 import com.fasterxml.jackson.annotation.JsonIgnore
+import org.hibernate.annotations.GenericGenerator
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import javax.persistence.*
 import javax.validation.constraints.Email
@@ -9,7 +10,8 @@ import javax.validation.constraints.NotNull
 @Entity(name = "users")
 class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(generator = "increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
     @field:JsonIgnore
     var id: Long? = null
 
