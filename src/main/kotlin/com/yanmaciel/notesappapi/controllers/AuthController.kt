@@ -11,7 +11,7 @@ import javax.validation.Valid
 
 @RestController
 @RequestMapping("v1/auth")
-@CrossOrigin(origins = ["http://localhost:3000", "https://notesapp-front-app.herokuapp.com"], allowCredentials = "true")
+@CrossOrigin(origins = ["http://localhost:3000", "https://notesapp-front-app.herokuapp.com", "http://notes.ecdb.com.br"], allowCredentials = "true")
 class AuthController(private val userService: UserService) {
 
     @PostMapping("register")
